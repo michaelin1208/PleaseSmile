@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
     var stillImageOutput:AVCaptureStillImageOutput?
+    var audioPlayer:AVAudioPlayer?
     
     @IBOutlet weak var takePhotoBtn: UIButton!
     @IBOutlet weak var laughBtn: UIButton!
@@ -58,11 +59,25 @@ class ViewController: UIViewController {
         videoPreviewLayer?.frame = view.layer.bounds
         view.layer.addSublayer(videoPreviewLayer!)
         
-        // Add image output into the session
+        // Add image output into the session.
         stillImageOutput = AVCaptureStillImageOutput()
         let outputSettings = NSDictionary(object: AVVideoCodecJPEG, forKey: AVVideoCodecKey)
         stillImageOutput?.outputSettings = outputSettings as! [NSObject : AnyObject]
         captureSession?.addOutput(stillImageOutput)
+        
+        // Initialize the audio player to play the laughing sounds.
+        let path = NSBundle.mainBundle().URLForResource("laugh1", withExtension: "mp3")
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOfURL: path!)
+        } catch let error1 as NSError {
+            error = error1
+            audioPlayer = nil
+        }
+        if (error != nil) {
+            // If any error occurs, simply log the description of it and don't continue any more.
+            print("\(error?.localizedDescription)")
+            return
+        }
         
         // Move the message label and navigation bar to the top view
         view.bringSubviewToFront(takePhotoBtn)
@@ -109,6 +124,7 @@ class ViewController: UIViewController {
 
     // the touched action of laugh, it will play laughing sound.
     @IBAction func startLaugh(sender: AnyObject) {
+        audioPlayer?.play()
     }
     
     func image(image: UIImage, didFinishSavingWithError: NSError?, contextInfo: AnyObject) {

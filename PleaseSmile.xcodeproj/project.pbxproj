@@ -14,6 +14,7 @@
 		0176A8BC1C0C073600DAE0CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0176A8BA1C0C073600DAE0CB /* LaunchScreen.storyboard */; };
 		0176A8C71C0C073600DAE0CB /* PleaseSmileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0176A8C61C0C073600DAE0CB /* PleaseSmileTests.swift */; };
 		0176A8D21C0C073600DAE0CB /* PleaseSmileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0176A8D11C0C073600DAE0CB /* PleaseSmileUITests.swift */; };
+		0199BE561C0C449100A75CA0 /* laugh1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0199BE551C0C449100A75CA0 /* laugh1.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		0176A8CD1C0C073600DAE0CB /* PleaseSmileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PleaseSmileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0176A8D11C0C073600DAE0CB /* PleaseSmileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PleaseSmileUITests.swift; sourceTree = "<group>"; };
 		0176A8D31C0C073600DAE0CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0199BE551C0C449100A75CA0 /* laugh1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = laugh1.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		0176A8B01C0C073600DAE0CB /* PleaseSmile */ = {
 			isa = PBXGroup;
 			children = (
+				0199BE551C0C449100A75CA0 /* laugh1.mp3 */,
 				0176A8B11C0C073600DAE0CB /* AppDelegate.swift */,
 				0176A8B31C0C073600DAE0CB /* ViewController.swift */,
 				0176A8B51C0C073600DAE0CB /* Main.storyboard */,
@@ -232,6 +235,7 @@
 				0176A8BC1C0C073600DAE0CB /* LaunchScreen.storyboard in Resources */,
 				0176A8B91C0C073600DAE0CB /* Assets.xcassets in Resources */,
 				0176A8B71C0C073600DAE0CB /* Main.storyboard in Resources */,
+				0199BE561C0C449100A75CA0 /* laugh1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +486,7 @@
 				0176A8D81C0C073600DAE0CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0176A8D91C0C073600DAE0CB /* Build configuration list for PBXNativeTarget "PleaseSmileTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +495,7 @@
 				0176A8DB1C0C073600DAE0CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0176A8DC1C0C073600DAE0CB /* Build configuration list for PBXNativeTarget "PleaseSmileUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +504,7 @@
 				0176A8DE1C0C073600DAE0CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
